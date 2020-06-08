@@ -1,23 +1,19 @@
 package com.home.storage.model;
 
 import com.fasterxml.jackson.databind.ser.Serializers;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@Entity
 @Table(name = "item")
 public class Item  extends BaseEntity {
 
+    @Builder
     public Item(Long id, String name, String description, Date purchaseDate, Date openDate, Long percentageOfUse, Long price, ItemType itemType, Brand brand, StatusOfItem statusOfItem) {
         super(id);
         this.name = name;
