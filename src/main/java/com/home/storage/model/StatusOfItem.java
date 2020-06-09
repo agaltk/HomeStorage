@@ -16,7 +16,7 @@ public class StatusOfItem extends BaseEntity {
     @Column(name="name")
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "item")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "statusOfItem")
     private Set<Item> items = new HashSet<>();
 
     @Builder

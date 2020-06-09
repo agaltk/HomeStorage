@@ -42,7 +42,7 @@ public class Item  extends BaseEntity {
     @Column(name ="percentage_of_use")
     private Long percentageOfUse;
 
-    @Column(name ="name")
+    @Column(name ="price")
     private Long price;
 
     @ManyToOne

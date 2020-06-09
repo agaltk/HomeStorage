@@ -16,7 +16,7 @@ public class ItemType extends BaseEntity{
     @Column(name="name")
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "item")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "itemType")
     private Set<Item> items = new HashSet<>();
 
     @Builder
