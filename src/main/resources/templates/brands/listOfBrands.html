@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang ="pl" xmlns:th="https://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Home Storage</title>
+</head>
+<body>
+<h1 th:text="'List of Brands'">List of Brands....</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th style ="width: 150px;">Id</th>
+        <th style ="width: 150px;">Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="brand : ${brands}">
+        <td th:text="${brand?.id}">0</td>
+        <td th:text="${brand?.name}">nope</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

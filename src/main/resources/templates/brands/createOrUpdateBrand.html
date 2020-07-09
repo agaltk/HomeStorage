@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang ="pl" xmlns:th="https://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Home Storage</title>
+</head>
+<body>
+
+    <form th:object="${brand}" th:action="@{/brands/new}" id="add-brand-form" method="post">
+        <input type="text" id="name" name="name" th:value="*{name}" />
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
