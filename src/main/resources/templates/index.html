@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang ="pl" xmlns:th="https://www.thymeleaf.org" >
+<html lang ="pl" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
 
 <head>
     <meta charset="UTF-8">
     <title>Home Storage</title>
+
+    <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+    <link href="webjars/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 

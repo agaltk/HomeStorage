@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang ="pl" xmlns:th="https://www.thymeleaf.org" >
+<html lang ="pl" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
 <head>
     <meta charset="UTF-8">
     <title>Home Storage</title>
+
+    <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+    <link href="webjars/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <h1 th:text="'List of Brands'">List of Brands....</h1>
@@ -12,14 +16,17 @@
     <tr>
         <th style ="width: 150px;">Id</th>
         <th style ="width: 150px;">Name</th>
+        <th>Show</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="brand : ${brands}">
         <td th:text="${brand?.id}">0</td>
         <td th:text="${brand?.name}">nope</td>
+        <th><a class="btn btn-primary" th:href="@{'/brands/new/' }">Show</a></th>
     </tr>
     </tbody>
 </table>
+<a class="btn btn-primary" th:href="@{'/brands/new/' }">Add new</a>
 </body>
 </html>

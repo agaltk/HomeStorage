@@ -1,0 +1,28 @@
+<!doctype html>
+<html th:fragment="layout (template, menu)">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Storage</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+
+                <a class="btn btn-primary" th:href="@{'/brands/list/' }">List of brands</a>
+
+
+        </div>
+        <div class="col-sm-8">
+            <th:block th:include="${template}"/>
+
+        </div>
+
+    </div>
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
